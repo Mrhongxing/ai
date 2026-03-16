@@ -167,7 +167,7 @@ TARGET_CATEGORY_RATIO = {
      "回忆与意义重建": 0.10,
      "高风险自伤暗示": 0.08,
 }
-
+# 按比例选择类别，过多则降低概率，保持多样性
 def choose_by_ratio(rng: random.Random, ratio: Dict[str, float]) -> str:
      items = list(ratio.items())  # 转为列表
      total = sum(v for _, v in items)  # 总和
